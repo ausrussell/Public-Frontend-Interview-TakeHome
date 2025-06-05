@@ -1,5 +1,6 @@
-'use client';
-import ThemeRegistry from '@/utils/ThemeRegistry';
+"use client";
+import ThemeRegistry from "@/styles/ThemeRegistry";
+import styles from "@/styles/AnimatedBackground.module.css";
 
 export default function RootLayout({
   children,
@@ -10,11 +11,21 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+          rel="stylesheet"
+        />
       </head>
       <body>
-        <ThemeRegistry>{children}</ThemeRegistry>
+        <ThemeRegistry>
+          <div className={styles.animatedBg} />
+          {children}
+        </ThemeRegistry>
       </body>
     </html>
   );

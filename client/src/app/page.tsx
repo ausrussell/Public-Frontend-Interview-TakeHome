@@ -1,8 +1,10 @@
 "use client";
-import { Typography } from "@mui/material";
+import { Card, Typography } from "@mui/material";
 import Button from "@mui/material/Button";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
   return (
     <main
       style={{
@@ -14,12 +16,27 @@ export default function Home() {
         gap: 32,
       }}
     >
-      <Typography variant="h1" align="center">
-        Manta Cares
-      </Typography>
-      <Button variant="contained" color="primary" size="large">
-        Symptoms
-      </Button>
+      <Card
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          p: 4,
+        }}
+      >
+        <Typography variant="h1" align="center">
+          Manta Cares
+        </Typography>
+        <Button
+          variant="contained"
+          color="primary"
+          size="large"
+          onClick={() => router.push("/symptoms")}
+        >
+          Let us help you with your Symptoms
+        </Button>
+      </Card>
     </main>
   );
 }
