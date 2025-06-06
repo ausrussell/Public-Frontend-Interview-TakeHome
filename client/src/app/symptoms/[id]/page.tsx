@@ -1,30 +1,13 @@
 "use client";
-import {
-    Alert,
-    CircularProgress,
-    Container,
-    Typography
-} from "@mui/material";
+import { Alert, CircularProgress, Container, Typography } from "@mui/material";
 import { useParams } from "next/navigation";
 import { Suspense, useEffect, useState } from "react";
 import {
-    fetchAllInterventions,
-    fetchSymptomById,
-} from "../../../api/fetchSymptoms";
+  fetchAllInterventions,
+  fetchSymptomById,
+} from "@/api/fetchSymptoms";
 import InterventionsClient from "../components/InterventionsClient";
-import { Symptom } from "../types";
-
-interface Intervention {
-  id: number;
-  name: string;
-  description: string;
-  severity: string[];
-  product_link: string;
-  product_image: string;
-  likes: number;
-  dislikes: number;
-  SOS?: boolean;
-}
+import { Symptom, Intervention } from "../types";
 
 const severityLevels = ["mild", "moderate", "severe"];
 
@@ -42,7 +25,7 @@ export default function SymptomDetailPage({
 
   useEffect(() => {
     if (!id) return;
-    async function fetchData() {
+    const fetchSymptomInterventionData = async () => {
       setLoading(true);
       try {
         const symptomRes = await fetchSymptomById(String(id));
@@ -73,8 +56,8 @@ export default function SymptomDetailPage({
         setError("Failed to load symptom details.");
         setLoading(false);
       }
-    }
-    fetchData();
+    };
+    fetchSymptomInterventionData();
   }, [id]);
   if (loading) {
     return (

@@ -18,6 +18,7 @@ export default async function SymptomListPage() {
     >
       <Typography
         variant="h4"
+        mb={4}
       >
         Let us help you with your symptoms
       </Typography>

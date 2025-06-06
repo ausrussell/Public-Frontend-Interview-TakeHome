@@ -22,10 +22,11 @@ export default function Home() {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          p: 4,
+          p:8,
+          pt:4
         }}
       >
-        <Typography variant="h1" align="center">
+        <Typography variant="h1" align="center" mb={3}>
           Manta Cares
         </Typography>
         <Button

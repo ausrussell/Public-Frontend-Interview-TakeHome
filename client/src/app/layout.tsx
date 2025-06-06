@@ -21,12 +21,11 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body>
-        <ThemeRegistry>
-          <div className={styles.animatedBg} />
+      <ThemeRegistry>
+        <body className={styles.animatedBg}>
           {children}
-        </ThemeRegistry>
-      </body>
+        </body>
+      </ThemeRegistry>
     </html>
   );
 }
