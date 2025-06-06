@@ -25,7 +25,7 @@ A small Next.js + React/TypeScript project using Material-UI (MUI) for UI compon
 
 1. **Clone the repository**
    ```bash
-   git clone <your-repo-url>
+   git clone <https://github.com/ausrussell/Public-Frontend-Interview-TakeHome.git>
    cd Public-Frontend-Interview-TakeHome/client
    ```
 2. **Install dependencies**
