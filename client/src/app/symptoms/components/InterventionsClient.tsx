@@ -12,18 +12,8 @@ import {
   Typography,
 } from "@mui/material";
 import { useState } from "react";
+import { Intervention } from "../types";
 
-interface Intervention {
-  id: number;
-  name: string;
-  description: string;
-  severity: string[];
-  product_link: string;
-  product_image: string;
-  likes: number;
-  dislikes: number;
-  SOS?: boolean;
-}
 
 export default function InterventionsClient({
   interventions,
