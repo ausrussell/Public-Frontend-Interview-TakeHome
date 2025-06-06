@@ -48,7 +48,7 @@ A small Next.js + React/TypeScript project using Material-UI (MUI) for UI compon
 
 ## Folder Structure
 - `src/app/` – Next.js app directory for routing, pages, components
-- `src/app/symptoms` – handles the symptoms page - listing of symptoms and dynamic loading of details. Components are contained in their  and types contained for easy extension
+- `src/app/symptoms` – handles the symptoms page - listing of symptoms and dynamic loading of details. Components are contained in a directory and types in their own file for maintainability
 - `src/styles/` – Theme, styled components, and CSS modules
 - `public/` – Static assets
 
